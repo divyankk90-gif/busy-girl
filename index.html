@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Kanu Didi ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p1: #ff758c; --p2: #ff7eb3; --gold: #ffd700;
+        }
+
+        body {
+            margin: 0;
+            background: #fff0f3;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+        }
+
+        .header-msg {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--p1);
+            animation: fadeIn Down 1.5s;
+        }
+
+        h1 { font-family: 'Dancing Script', cursive; font-size: 3rem; margin: 0; }
+        
+        /* Container for Cards */
+        .cards-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* Common Card Style */
+        .card-wrapper {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            perspective: 1500px;
+            cursor: pointer;
+        }
+
+        .base-card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 117, 140, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 5px solid #fff;
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--p1), var(--p2));
+            border-radius: 25px;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .cover span { font-size: 50px; margin-bottom: 10px; animation: heartbeat 1.5s infinite; }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* --- 5 UNIQUE ANIMATIONS --- */
+
+        /* 1. Slide Animation */
+        .card-1:hover .cover { transform: translateX(-110%) rotate(-10deg); opacity: 0; }
+
+        /* 2. Flip Animation */
+        .card-2:hover .cover { transform: rotateY(-160deg); transform-origin: left; }
+
+        /* 3. Zoom Out Animation */
+        .card-3:hover .cover { transform: scale(0); opacity: 0; }
+
+        /* 4. Rotate Up Animation */
+        .card-4:hover .cover { transform: translateY(-110%) rotate(20deg); opacity: 0; }
+
+        /* 5. Door Opening Style */
+        .card-5:hover .cover { transform: perspective(1000px) rotateX(110deg); transform-origin: top; opacity: 0; }
+
+        /* Message Styling */
+        .msg-h { font-family: 'Dancing Script', cursive; color: var(--p1); font-size: 2rem; margin-bottom: 10px; }
+        .msg-p { font-size: 0.95rem; line-height: 1.6; color: #555; }
+        .cake { font-size: 40px; margin-top: 10px; }
+
+        .sorry-tag {
+            background: #ffe5ec;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: #fb6f92;
+            margin-top: 15px;
+        }
+
+        /* Floating Decoration */
+        .bg-sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-msg">
+        <h1>Kanu Didi's Surprise Box</h1>
+        <p>Tap on each card to see the magic! ✨</p>
+    </div>
+
+    <div class="cards-gallery">
+        
+        <div class="card-wrapper card-1">
+            <div class="cover"><span>📱</span><p>Kanu Didi is Online?</p></div>
+            <div class="base-card">
+                <div class="msg-h">The "Busy Girl"</div>
+                <p class="msg-p">Aap bhale hi kitni bhi busy rahein, par mere liye aapka wo thoda sa time hi kaafi hai. Aap online aati hain toh screen chamak uthti hai! ✨</p>
+                <div class="cake">🍰</div>
+            </div>
+        </div>
+
+        <div class="card-wrapper card-2">
+            <div class="cover"><span>🌸</span><p>Kitni Sundar Hai?</p></div>
+            <div class="base-card">
+                <div class="msg-h">Sacha Man, Sundar Chehra</div>
+                <p class="msg-p">Aapki sundarta toh bas ek part hai, aapka dil usse bhi kahin zyada pyaara hai. Aap online milne wali sabse achhi insaan hain. 😍</p>
+                <div class="cake">🧁</div>
+            </div>
+        </div>
+
+        <div class="card-wrapper card-3">
+            <div class="cover"><span>🙏</span><p>Ek Choti Si Baat...</p></div>
+            <div class="base-card">
+                <div class="msg-h">I am Really Sorry!</div>
+                <p class="msg-p">Didi, thoda late wish kar raha hoon kyunki main library chala jata hoon aur phone behen ke pass hota hai. Par aap mere liye bahut special ho!</p>
+                <div class="sorry-tag">Made with 💻 New Laptop</div>
+                <div class="cake">🎂</div>
+            </div>
+        </div>
+
+        <div class="card-wrapper card-4">
+            <div class="cover"><span>🎁</span><p>Ek Bhai Ki Dua</p></div>
+            <div class="base-card">
+                <div class="msg-h">Stay Blessed Always</div>
+                <p class="msg-p">Dua hai ki aapka phone hamesha khushiyon ke messages se bhara rahe. Aap hamesha aise hi muskurati rahein aur busy rahein!</p>
+                <div class="cake">🍩</div>
+            </div>
+        </div>
+
+        <div class="card-wrapper card-5">
+            <div class="cover"><span>🥳</span><p>Ab Party Chahiye!</p></div>
+            <div class="base-card">
+                <div class="msg-h">Happy Birthday Kanu!</div>
+                <p class="msg-p">Duniya ki sabse achhi Didi ko janamdin ki dher saari badhai. Naye laptop se ye pehla gift sirf aapke liye banaya hai. ❤️</p>
+                <div class="cake">🎂🎈</div>
+                <button onclick="blast()" style="margin-top:10px; border:none; background:var(--p1); color:white; padding:10px 20px; border-radius:20px;">Click for Jadu ✨</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Floating Background Sparkles
+        function createSparkle() {
+            const icons = ['❤️', '🌸', '✨', '🎈', '🍭'];
+            const sparkle = document.createElement('div');
+            sparkle.className = 'bg-sparkle';
+            sparkle.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.fontSize = Math.random() * 20 + 10 + 'px';
+            sparkle.style.animationDuration = Math.random() * 3 + 4 + 's';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 6000);
+        }
+        setInterval(createSparkle, 500);
+
+        function blast() {
+            alert("Kanu Didi, Aap Sach Mein Best Ho! 🎂🥳");
+            for(let i=0; i<30; i++) {
+                createSparkle();
+            }
+        }
+    </script>
+</body>
+</html>
